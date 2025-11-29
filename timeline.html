@@ -1,24 +1,144 @@
 <!DOCTYPE html>
-<body class="about-page">
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>About Me - Xiang Gu, EIT</title>
+    <title>My Experiences - Xiang Gu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+    /* ------- Timeline Custom Style (Left-Align, 2 Levels) ------- */
+
+    .timeline {
+        position: relative;
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+
+    /* Vertical line */
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #ccc;
+    }
+
+    /* Main event */
+    .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+        padding-left: 30px;
+    }
+
+    /* Main big dot */
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 5px;
+        width: 14px;
+        height: 14px;
+        background: #4CAF50;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    }
+
+    /* Sub event */
+    .sub-item {
+        position: relative;
+        margin: 10px 0 10px 20px;
+        padding-left: 20px;
+        font-size: 0.95em;
+        color: #555;
+    }
+
+    /* Small dot */
+    .sub-item::before {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: 7px;
+        width: 10px;
+        height: 10px;
+        background: #999;
+        border-radius: 50%;
+    }
+
+    .timeline-title {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .timeline-year {
+        font-size: 0.9em;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust spacing on Strata theme */
+    #main h2 {
+        margin-top: 50px;
+    }
+    </style>
 </head>
-<body>
+
+<body class="about-page">
 
 <!-- Main -->
 <div id="main">
     <a href="javascript:history.back()" class="button">← Back</a>
     <br><br>
+
     <header>
-        <h1>About Me</h1>
-        <p>I am a structural engineer shaped by early encounters with earthquake sites and a deep fascination with traditional Chinese timber architecture. My work focuses on performance-based seismic engineering, structural analysis, and the resilience embedded in ancient wooden buildings. I’m particularly interested in how traditional joinery systems and historical structural logic can inspire modern design strategies.</p>
-        <p>I have completed projects in nonlinear analysis, steel moment frame evaluation, and seismic performance assessment using ASCE‑7 and ASCE‑41 methodologies. My academic path has taken me from UC Davis to Berkeley, where I continue exploring the intersection of cultural heritage and modern engineering.</p>
+        <h1>My Experience Timeline</h1>
     </header>
 
+    <!-- ===================== Timeline Section ===================== -->
+    <section>
+        <h2>Timeline</h2>
+
+        <div class="timeline">
+
+            <!-- Event 1 -->
+            <div class="timeline-item">
+                <div class="timeline-title">UC Berkeley – M.S. Structural Engineering</div>
+                <div class="timeline-year">2024 – 2026</div>
+                
+                <div class="sub-item">PBSE research focus</div>
+                <div class="sub-item">ECI 238 Final Report (Advanced Analysis)</div>
+                <div class="sub-item">Fragility modeling & ASCE-41 performance evaluation</div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="timeline-item">
+                <div class="timeline-title">UC Davis – Senior Structural Design</div>
+                <div class="timeline-year">2023</div>
+
+                <div class="sub-item">Evaluated R & Cd variation across stories</div>
+                <div class="sub-item">Performed pushover in SAP2000</div>
+                <div class="sub-item">Studied nonlinear steel frame behavior</div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="timeline-item">
+                <div class="timeline-title">UC Davis – B.S. Civil Engineering</div>
+                <div class="timeline-year">2021 – 2024</div>
+
+                <div class="sub-item">Developed seismic engineering interest</div>
+                <div class="sub-item">Learned structural dynamics & earthquake engineering</div>
+                <div class="sub-item">Early exposure to PBSD concepts</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================== Existing Project Cards ===================== -->
     <section>
         <h2>Projects</h2>
 
@@ -30,13 +150,13 @@
 
         <article>
             <h3>ECI 233 – Steel Moment-Resisting Frames (SMRF) Presentation</h3>
-            <p>Analyzed the seismic performance of steel SMRF systems, examined beam‑column connections, and evaluated failure modes. Presented a full system‑level assessment of SMRF seismic behavior.</p>
+            <p>Analyzed the seismic performance of steel SMRF systems, examined beam-column connections, and evaluated failure modes. Presented a full system-level assessment of SMRF seismic behavior.</p>
             <a href="/mnt/data/ECI233 SMRF Presentation Final Version.pdf" class="button">View Presentation PDF</a>
         </article>
 
         <article>
             <h3>ECI 238 – Advanced Structural Analysis Final Report</h3>
-            <p>Completed advanced analysis of multi‑degree‑of‑freedom systems, applying matrix methods and nonlinear modeling techniques. Assessed structural performance under extreme loading scenarios.</p>
+            <p>Completed advanced analysis of multi-degree-of-freedom systems, applying matrix methods and nonlinear modeling techniques. Assessed structural performance under extreme loading scenarios.</p>
             <a href="/mnt/data/ECI238 Final Report.pdf" class="button">View Report PDF</a>
         </article>
 
